@@ -1,0 +1,36 @@
+﻿@using WebApp2._1.Services
+@inject CalculatorService Service
+@{
+    ViewBag.Title = "AccessServiceDirectly - Backend1";
+    var Model = Service.GetCalcModel();
+}
+
+<h1>AccessServiceDirectly</h1>
+
+<div>
+   <p><b>Rand value first: @(Model.X)</b></p>
+</div>
+
+<div>
+    <p><b>Rand value second: @(Model.Y)</b></p>
+</div>
+
+<div>
+    <p><b>Add:</b></p>
+    <p>@(Model.Add)</p>
+</div>
+
+<div>
+    <p><b>Sub:</b></p>
+    <p>@(Model.Sub)</p>
+</div>
+
+<div>
+    <p><b>Mult:</b></p>
+    <p>@(Model.Mult)</p>
+</div>
+
+<div>
+    <p><b>Div:</b></p>
+    <p>@(Model.Div)</p>
+</div>
